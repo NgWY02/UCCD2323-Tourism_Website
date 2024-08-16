@@ -240,10 +240,6 @@
     margin-bottom: 30px;
 }
 
-.map-section .map-container {
-    height: 500px;
-}
-
 .testimonials blockquote {
     background: #f8f9fa;
     border-left: 10px solid #007bff;
@@ -326,20 +322,24 @@
     -webkit-text-fill-color: transparent;
 }
 
-
-.map-section .map-container {
-    height: 500px;
-    max-width: 800px;
-    margin: 0 auto;
+.map-section {
+    padding: 2rem; /* Add padding around the section */
+    text-align: center;
 }
 
-#malaysia-map path {
-    cursor: pointer;
-    transition: fill 0.3s;
+.map-container {
+    height: 500px; /* Fixed height for the map */
+    width: 100%;   /* Full width within its container */
+    max-width: 1200px; /* Maximum width to keep the map within a defined size */
+    margin: 0 auto; /* Center the map container */
+    position: relative; /* Ensure proper positioning */
+    border: 2px solid #ddd; /* Optional: Add a border for visual boundaries */
+    overflow: hidden; /* Prevent the map from overflowing */
 }
 
-#malaysia-map path:hover {
-    fill: #007bff;
+.container-map {
+    max-width: 1200px; /* Ensure the container width */
+    margin: 0 auto; /* Center the container */
 }
 
 .featured-destinations .section-title {
@@ -397,4 +397,83 @@
     border-color: #0056b3;
 }
 
+.blog {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+    overflow: hidden;
+    text-align: center; /* Center-align title */
+}
 
+.section-title {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-family: 'Allura', cursive;
+    font-size: 4rem;
+    font-weight:bold;
+    background: linear-gradient(to right, #02191f, #007BFF); /* Shallow to deep blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.blog-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.blog-flex-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.blog-card {
+    flex: 0 0 300px;
+    margin-right: 2rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hide scrollbar */
+.blog-slider::-webkit-scrollbar {
+    display: none;
+}
+.blog-slider {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem; /* Adjust size as needed */
+    cursor: pointer;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    color: white; /* Arrow color */
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .blog-card {
+        flex: 0 0 100%;
+        margin-right: 0;
+    }
+}

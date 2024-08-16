@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Tourist Destinations</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 600px; }
+    </style>
+</head>
+<body>
+    <h1>Nearby Tourist Destinations</h1>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const map = L.map('map').setView([3.139, 101.6869], 13); // Default view for Kuala Lumpur
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            let userLocationMarker = null;
+
+            // Function to fetch nearby tourist attractions
+            const fetchNearbyAttractions = (lat, lon) => {
+                const query = `
+                    [out:json];
+                    (
+                      node["tourism"~"attraction|museum|artwork|landmark"](around:3000, ${lat}, ${lon});
+                      way["tourism"~"attraction|museum|artwork|landmark"](around:3000, ${lat}, ${lon});
+                      relation["tourism"~"attraction|museum|artwork|landmark"](around:3000, ${lat}, ${lon});
+                    );
+                    out body;
+                `;
+                const url = `https://overpass-api.de/api/interpreter?data=${encodeURIComponent(query)}`;
+
+                $.getJSON(url)
+                    .done((data) => {
+                        // Remove existing markers
+                        map.eachLayer((layer) => {
+                            if (layer instanceof L.Marker && layer !== userLocationMarker) {
+                                map.removeLayer(layer);
+                            }
+                        });
+
+                        if (data.elements.length === 0) {
+                            alert('No nearby tourist attractions found.');
+                        } else {
+                            data.elements.forEach(element => {
+                                const lat = element.lat || element.center.lat;
+                                const lon = element.lon || element.center.lon;
+                                const name = element.tags.name || 'No name';
+
+                                L.marker([lat, lon]).addTo(map)
+                                    .bindPopup(name);
+                            });
+                        }
+                    })
+                    .fail((jqXHR, textStatus, errorThrown) => {
+                        console.error('Error fetching attractions:', textStatus, errorThrown);
+                    });
+            };
+
+            // Debounce function to limit rapid clicks
+            const debounce = (func, delay) => {
+                let timeout;
+                return function (...args) {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func.apply(this, args), delay);
+                };
+            };
+
+            // Handle map click to fetch nearby attractions
+            const handleMapClick = debounce(function(e) {
+                const lat = e.latlng.lat;
+                const lon = e.latlng.lng;
+
+                // Add a marker for the clicked location
+                L.marker([lat, lon]).addTo(map)
+                    .bindPopup('Clicked Location')
+                    .openPopup();
+
+                // Fetch and display nearby attractions
+                fetchNearbyAttractions(lat, lon);
+            }, 500); // 500ms debounce delay
+
+            map.on('click', handleMapClick);
+
+            // Initial marker for user location (optional)
+            userLocationMarker = L.marker([3.139, 101.6869]).addTo(map)
+                .bindPopup('Default Location')
+                .openPopup();
+        });
+    </script>
+</body>
+</html>
