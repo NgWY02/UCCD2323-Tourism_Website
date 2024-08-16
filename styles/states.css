@@ -165,7 +165,7 @@
 
 .container {
 max-width: 1000px;
-margin: 20px auto;
+margin: 10px auto;
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the container */
 border-radius: 8px; /* Add rounded corners */
 font-size: 1.2em;
@@ -173,7 +173,7 @@ font-size: 1.2em;
     
 .day-header {
 text-align: center;
-margin-bottom: 30px;
+margin: 140px 30px;
 background-color: #e0e0e0; /* Add a light background to the header */
 padding: 15px 0;
 }
