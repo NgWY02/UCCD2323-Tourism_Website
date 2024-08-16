@@ -1,0 +1,168 @@
+body {
+    background: #f8f9fa;
+    font-family: 'Metropolis', sans-serif;
+    
+}
+
+.header {
+    background: url('../images/wh/forfaqpage.jpg') no-repeat center center fixed; /* Added fixed to create parallax */
+    background-size: cover;
+    color: white;
+    padding: 250px 0;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Add background color with transparency */
+    padding: 20px;
+    max-width: 600px;
+    margin-left: auto; /* Center the content horizontally */
+    margin-right: auto; /* Center the content horizontally */
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.header p {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+/* Define the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slight upward translation */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Original position */
+    }
+}
+
+/* Apply the fade-in animation to the header text */
+.header h1, .header p {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 2s ease-out forwards; /* 2-second fade-in animation */
+    animation-delay: 0.5s; /* Delay to start the animation */
+}
+
+
+.faq-section {
+    padding: 60px 0;
+}
+.faq-section h4 {
+    margin-bottom: 30px;
+}
+
+
+.accordion-button {
+    text-align: left;
+    font-weight: bold;
+    padding-left: 1.5rem;
+    background-color: #f8f9fa;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    border-radius: 8px; /* Add rounded corners */
+}
+
+.accordion-button:hover {
+    background-color: #e2e6ea; /* Lighter grey on hover */
+    transform: scale(1.02); /* Slightly increase size */
+    border-radius: 8px; /* Ensure rounded corners on hover */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #6c757d; /* Dark grey background when expanded */
+    color: white;
+    border-radius: 8px; /* Keep rounded corners when expanded */
+}
+
+.accordion-collapse {
+    background-color: #fff; /* Keep answer background white */
+    border-radius: 0 0 8px 8px; /* Rounded corners on the bottom part */
+}
+
+.card-body {
+    background-color: #fff;
+    border-radius: 0 0 8px 8px; /* Rounded corners at the bottom of the card */
+}
+
+.card {
+    border: none; /* Remove any border */
+    border-radius: 8px; /* Ensure card has rounded corners */
+    margin-bottom: 10px; /* Add some space between cards */
+}
+
+/* Feedback Section Styling */
+.feedback-section {
+    background-color: #f8f9fa; /* Matching the background */
+    padding: 40px 20px;
+}
+
+.feedback-section h2 {
+    color: #36459f; /* Match with the theme color */
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* Feedback Form Container Styling */
+.feedback-form-container {
+    background-color: #f0f0f0; /* Light grey background */
+    padding: 30px;
+    border: 1px solid #d3d3d3; /* Light grey border */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.feedback-section .form-label {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.feedback-section .form-control {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+}
+.feedback-section .btn-primary {
+    font-size: 1rem;  /* Reduced font size */
+    padding: 10px 20px; /* Adjust padding */
+    background-color: #36459f;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap; /* Prevent text wrapping */
+    width: auto; /* Auto width */
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.2;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition */
+}
+
+.feedback-section .btn-primary:hover {
+    background-color: #2a3a8e; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Initial state before the sections are visible */
+.faq-section, .feedback-section {
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly below */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Class to trigger the animations */
+.section-visible {
+    opacity: 1;
+    transform: translateY(0); /* Slide up to original position */
+}
+
+

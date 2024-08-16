@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Malaysia's best shopping malls and retail destinations.">
+    <title>Shopping Malls in Malaysia - Discover Amazing Shopping Experiences</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="/styles/shoppingMall.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+            <div class="container">
+                <a class="navbar-brand custom-logo" href="index.html">
+                    <img src="/images/weiyu/tourism_malaysia_logo.png" alt="Malaysia Tourism Logo" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto custom-nav">
+                        <li class="nav-item">
+                            <a class="fw-bold nav-link" href="about.html">About Malaysia</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="fw-bold nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Destination
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="navbarDropdownMenuLink">
+                                <li class="dropdown-item-custom">
+                                    <a class="dropdown-item" href="shoppingMall.html">
+                                        <img src="../images/weiyu/1stAvenue.jpg" alt="Shopping Mall" class="dropdown-image">
+                                        Shopping Mall
+                                    </a>
+                                </li>
+                                <li class="dropdown-item-custom">
+                                    <a class="dropdown-item" href="restaurant.html">
+                                        <img src="../images/weiyu/food_places.jpeg" alt="Food Places" class="dropdown-image">
+                                        Food Places
+                                    </a>
+                                </li>
+                                <li class="dropdown-item-custom">
+                                    <a class="dropdown-item" href="../templates/index.html#popular-places">
+                                        <img src="../images/weiyu/langkawi.png" alt="Popular Place" class="dropdown-image">
+                                        Tourist Destination
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="fw-bold nav-link" href="travel_tips.html">Travel Tips</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="fw-bold nav-link" href="Deals.html">Deals & Packages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="fw-bold nav-link" href="FAQ.html">FAQ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="fw-bold nav-link" href="profile.html" id="profileDropdown">
+                                <img src="../images/weiyu/login_icon.png" alt="Login Icon" class="login-icon">
+                                Profile 
+                            </a>
+                            <ul class="dropdown-menu" id="profileMenu">
+                                <li><a class="dropdown-item" href="login.html">Sign In</a></li>
+                                <li><a class="dropdown-item" href="register.html">Register</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="custom-search-container">
+        <div class="container">
+            <form id="searchForm" class="d-flex">
+                <input class="form-control me-2 search-input-custom" type="search" placeholder="Search malls or locations" aria-label="Search" id="searchInput">
+                <button class="btn btn-primary" type="submit" id="searchButton">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <main class="container mt-5 pt-5">
+        <div class="title-container">
+            <h1 class="text-center mb-5 title-decorated">Shopping Malls in Malaysia</h1>
+        </div>
+
+        <h2 id="kualaLumpur" class="text-center mb-4">Kuala Lumpur</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/suriaKLCC.png" class="card-img-top" alt="Suria KLCC">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Suria KLCC</h5>
+                        <p class="card-text"><i class="fas fa-map-marker-alt icon"></i> Kuala Lumpur</p>
+                        <a href="https://www.suriaklcc.com.my/" class="btn btn-primary"><i
+                                class="fas fa-info-circle icon"></i> Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/pavilion.jpg" class="card-img-top" alt="Pavilion Kuala Lumpur">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Pavilion Kuala Lumpur</h5>
+                        <p class="card-text">An award-winning, world-class mixed-use urban development in the heart of
+                            Bukit Bintang.</p>
+                        <a href="https://www.pavilion-kl.com/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/midValley.jpg" class="card-img-top" alt="Mid Valley Megamall">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Mid Valley Megamall</h5>
+                        <p class="card-text">One of the largest shopping malls in Southeast Asia, offering a wide range
+                            of retail and dining options.</p>
+                        <a href="https://www.midvalley.com.my/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/berjayaTimeSquare.jpg" class="card-img-top" alt="Berjaya Times Square">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Berjaya Times Square</h5>
+                        <p class="card-text">A large shopping mall offering various retail options, entertainment, and
+                            dining.</p>
+                        <a href="https://www.berjayatimessquarekl.com/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/theGarden.jpg" class="card-img-top" alt="The Gardens Mall">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> The Gardens Mall</h5>
+                        <p class="card-text">A premium shopping destination offering luxury brands and fine dining.</p>
+                        <a href="https://www.thegardensmall.com.my/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="selangor" class="text-center mb-4">Selangor</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/sunwayPyramid.jpg" class="card-img-top" alt="Sunway Pyramid">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Sunway Pyramid</h5>
+                        <p class="card-text">A unique shopping experience with its iconic Egyptian-inspired design.</p>
+                        <a href="https://www.sunwaypyramid.com/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/1U.jpg" class="card-img-top" alt="1 Utama Shopping Centre">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> 1 Utama Shopping Centre</h5>
+                        <p class="card-text">One of the largest malls in Malaysia, known for its vast selection of
+                            stores and entertainment options.</p>
+                        <a href="https://www.1utama.com.my/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/IOI.jpg" class="card-img-top" alt="IOI City Mall">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> IOI City Mall</h5>
+                        <p class="card-text">One of the largest malls in Malaysia, offering diverse shopping, dining,
+                            and entertainment options.</p>
+                        <a href="https://www.ioicitymall.com.my/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/setiaCityMall.jpg" class="card-img-top" alt="Setia City Mall">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Setia City Mall</h5>
+                        <p class="card-text">A family-friendly mall with a variety of retail stores and a large outdoor
+                            park.</p>
+                        <a href="https://www.setiacitymall.com/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="johor" class="text-center mb-4">Johor</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/citySquare.jpg" class="card-img-top" alt="Johor Bahru City Square">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Johor Bahru City Square</h5>
+                        <p class="card-text">A popular shopping destination in Johor Bahru, known for its variety of
+                            stores and eateries.</p>
+                        <a href="https://www.citysqjb.com/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/TebrauCity.jpg" class="card-img-top" alt="AEON Tebrau City">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> AEON Tebrau City</h5>
+                        <p class="card-text">A large mall offering a wide range of shopping and dining options, as well
+                            as entertainment facilities.</p>
+                        <a href="https://www.aeonretail.com.my/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/paradigmMall.jpg" class="card-img-top" alt="Paradigm Mall Johor Bahru">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Paradigm Mall Johor Bahru</h5>
+                        <p class="card-text">A contemporary shopping mall with a variety of retail, dining, and
+                            entertainment options.</p>
+                        <a href="https://www.paradigmmall.com.my/jb/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/R&FMall.jpg" class="card-img-top" alt="R&F Mall Johor Bahru">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> R&F Mall Johor Bahru</h5>
+                        <p class="card-text">A modern shopping destination featuring a mix of international and local
+                            brands, along with various dining options.</p>
+                        <a href="https://rnfmalljb.com/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="penang" class="text-center mb-4">Penang</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/gurneyPlaza.jpg" class="card-img-top" alt="Gurney Plaza">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Gurney Plaza</h5>
+                        <p class="card-text">A premier shopping destination in Penang, offering a wide range of retail,
+                            dining, and entertainment options.</p>
+                        <a href="https://gurneyplaza.com.my/" class="btn btn-primary">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/Queensbay.jpg" class="card-img-top" alt="Queensbay Mall">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Queensbay Mall</h5>
+                        <p class="card-text">A spacious mall with a variety of stores, dining options, and entertainment
+                            facilities.</p>
+                        <a href="https://www.queensbaymallmalaysia.com/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/1stAvenue.jpg" class="card-img-top" alt="1st Avenue Mall">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> 1st Avenue Mall</h5>
+                        <p class="card-text">A modern shopping mall in the heart of George Town, offering a mix of local
+                            and international brands.</p>
+                        <a href="https://www.1st-avenue-mall.com.my/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="sabah" class="text-center mb-4">Sabah</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/SuriaSabah.jpg" class="card-img-top" alt="Suria Sabah">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Suria Sabah</h5>
+                        <p class="card-text">A shopping mall located in Kota Kinabalu, offering a variety of retail and
+                            dining options.</p>
+                        <a href="https://www.suriasabah.com.my/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/imago.png" class="card-img-top" alt="Imago Shopping Mall">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Imago Shopping Mall</h5>
+                        <p class="card-text">A premier shopping destination in Kota Kinabalu, offering a wide range of
+                            stores, dining, and entertainment options.</p>
+                        <a href="https://www.imago.my/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="sarawak" class="text-center mb-4">Sarawak</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/theSpring.jpg" class="card-img-top" alt="The Spring Shopping Mall">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> The Spring Shopping Mall</h5>
+                        <p class="card-text">A popular mall in Kuching, offering a variety of retail, dining, and
+                            entertainment options.</p>
+                        <a href="https://www.thespring.com.my/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/vivacity.jpg" class="card-img-top" alt="Vivacity Megamall">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Vivacity Megamall</h5>
+                        <p class="card-text">A large shopping mall in Kuching, offering a wide range of stores, dining,
+                            and entertainment options.</p>
+                        <a href="https://www.vivacity.com.my/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="pahang" class="text-center mb-4">Pahang</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/eastCoast.jpg" class="card-img-top" alt="East Coast Mall">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> East Coast Mall</h5>
+                        <p class="card-text">A modern mall located in Kuantan, offering a variety of retail, dining, and
+                            entertainment options.</p>
+                        <a href="https://www.capitaland.com/my/malls/eastcoastmall/en.html"
+                            class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="perak" class="text-center mb-4">Perak</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/ipohParade.jpg" class="card-img-top" alt="Ipoh Parade">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Ipoh Parade</h5>
+                        <p class="card-text">A popular mall in Ipoh, offering a wide range of retail and dining options.
+                        </p>
+                        <a href="https://www.ipoh.parade.com.my/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="kelantan" class="text-center mb-4">Kelantan</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/kbMall.jpg" class="card-img-top" alt="KB Mall">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> KB Mall</h5>
+                        <p class="card-text">A popular shopping destination in Kota Bharu, offering a variety of retail
+                            and dining options.</p>
+                        <a href="https://www.kbmall.com.my/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="putrajaya" class="text-center mb-4">Putrajaya</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/ioiCityMall.png" class="card-img-top" alt="IOI City Mall">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> IOI City Mall</h5>
+                        <p class="card-text">A large shopping mall in Putrajaya, offering a variety of retail, dining,
+                            and entertainment options.</p>
+                        <a href="https://www.ioicitymall.com.my/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="negeri sembilan" class="text-center mb-4">Negeri Sembilan</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/palmMall.jpg" class="card-img-top" alt="Palm Mall Seremban">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Palm Mall Seremban</h5>
+                        <p class="card-text">A popular shopping destination in Seremban, offering a variety of retail
+                            and dining options.</p>
+                        <a href="https://www.palmmall.my/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="malacca" class="text-center mb-4">Malacca</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/dataranPahlawan.jpg" class="card-img-top" alt="Dataran Pahlawan Melaka Megamall">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Dataran Pahlawan Melaka Megamall
+                        </h5>
+                        <p class="card-text">A large shopping mall in Malacca, offering a variety of retail, dining, and
+                            entertainment options.</p>
+                        <a href="https://www.dataranpahlawan.com/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/mahkota.jpg" class="card-img-top" alt="Mahkota Parade">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Mahkota Parade</h5>
+                        <p class="card-text">A popular shopping destination in Malacca, offering a variety of retail and
+                            dining options.</p>
+                        <a href="https://www.mahkotaparade.com.my/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="labuan" class="text-center mb-4">Labuan</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mall-card">
+                    <img src="../images/engxianyu/financialPark.jpg" class="card-img-top" alt="Financial Park Labuan">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shopping-bag icon"></i> Financial Park Labuan</h5>
+                        <p class="card-text">A shopping mall located in Labuan, offering a variety of retail and dining
+                            options.</p>
+                        <a href="https://www.fpl.com.my/" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer py-4 bg-dark text-white">
+        <div class="container-fluid text-center">
+            <div class="row justify-content-between">
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <p>Email: info@tourismmalaysia.com</p>
+                    <p>Phone: +60 3-1234 5678</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <a href="https://www.facebook.com/malaysia.travel.my" class="text-white me-2"><i class="fab fa-facebook "></i></a>
+                    <a href="https://twitter.com/TourismMalaysia?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/malaysia.truly.asia/?hl=en" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white">About Malaysia</a></li>
+                        <li><a href="Deals.html" class="text-white">Deals & Packages</a></li>
+                        <li><a href="login.html" class="text-white">Sign In</a></li>
+                        <li><a href="FAQ.html" class="text-white">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="mt-3">&copy; 2024 Tourism Malaysia. All Rights Reserved.</p>
+        </div>
+    </footer>    
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../scripts/navbar.js" defer></script>
+        <script src="../scripts/shoppingMall.js"></script>
+            
+        <div class="floating-shopping-icon" title="Welcome to explore the mall !">🛒</div>
+            
+</body>
+
+</html>

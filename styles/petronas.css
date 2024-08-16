@@ -1,0 +1,276 @@
+/* Navbar styles */
+.navbar.custom-navbar {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    padding: 0.5rem 1rem;
+    transition: top 0.3s ease-in-out, background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar.custom-navbar:hover {
+    background-color: rgb(235, 230, 230)!important;
+}
+
+.navbar-brand img {
+    height: 50px;
+    max-width: 100%;
+}
+
+.navbar-nav {
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Distribute nav items evenly */
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.navbar-nav .nav-item {
+    flex-shrink: 0; /* Prevent shrinking */
+    margin: 0 0.5rem; /* Adjust spacing between items */
+}
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 0.25rem;
+    font-size: 20px;
+    font-family: "metropolis", sans-serif;
+    font-weight:bold;
+    color: white!important;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.navbar.custom-navbar:hover .nav-link,
+.navbar.custom-navbar.menu-open .nav-link {
+    color: black !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Set the color of the hamburger menu lines to black */
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Ensure the hamburger menu stays black on hover */
+}
+
+.navbar-toggler:hover {
+    border: 2px solid black; /* Optional: Add a border around the hamburger menu on hover */
+}
+
+@media (max-width: 1199.98px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.2rem;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0 0.2rem; /* Adjust spacing for smaller screens */
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar.custom-navbar {
+        background-color: transparent !important;
+    }
+
+    .navbar.custom-navbar.menu-open {
+        background-color: rgb(235, 230, 230)!important;
+    }
+
+    .navbar.custom-navbar.menu-open .nav-link {
+        color: black !important;
+    }
+    
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0.25rem 0;
+    }
+
+    .navbar-brand img {
+        height: 40px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .navbar-brand img {
+        height: 30px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.8rem;
+    }
+}
+
+.login-icon {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.dropdown-menu-custom {
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+    width: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Ensures correct positioning */
+    z-index: 1000; /* Ensures it appears above other content */
+}
+
+.dropdown-item-custom {
+    display: flex;
+    flex-direction: row; /* Keep image and text stacked vertically */
+    align-items: center;
+    margin-top: 5px 0; /* Increase margin between items */
+}
+
+.dropdown-image {
+    width: 200px; /* Increase the image size */
+    height: 100px; /* Increase the image size */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.dropdown-item {
+    text-align: left;
+    color: black;
+    font-size: 1rem; /* Increase the text size */
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa !important;
+    color: red;
+    border-radius: 5px; /* Optional: add rounding on hover */
+    transition: background-color 0.3s ease;
+}
+
+.header-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-section h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+.content-section {
+    padding: 50px 0;
+}
+.content-section h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.video-section {
+    padding: 50px 0;
+}
+.video-section h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.video-section iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+.twin-building-section {
+    background-color: #112133;
+    padding: 50px 0;
+    color: #00d1d1;
+}
+.twin-building-section h2 {
+    color: #00d1d1;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.twin-building-section p {
+    color: #d1d1d1;
+    margin-bottom: 40px;
+}
+.building-comparison {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.building-comparison div {
+    text-align: center;
+}
+.building-comparison img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+.construction-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+.construction-section h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.construction-section .icon-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.construction-section .icon-text img {
+    width: 40px;
+    margin-right: 15px;
+}
+.construction-section .construction-image {
+    width: 75%; /* Adjust the width of the image */
+    float: left;
+    margin-bottom: 20px;
+}
+.tour-section {
+    background-color: #112133;
+    padding: 50px 0;
+    color: #d1d1d1;
+}
+.tour-section h2 {
+    color: #00d1d1;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.step {
+    background-color: #223344;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.step-number {
+    display: inline-block;
+    background-color: #00d1d1;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}

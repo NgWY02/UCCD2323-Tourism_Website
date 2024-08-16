@@ -1,0 +1,388 @@
+/* Navbar styles */
+.navbar.custom-navbar {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    padding: 0.5rem 1rem;
+    transition: top 0.3s ease-in-out, background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar.custom-navbar:hover {
+    background-color: rgb(235, 230, 230)!important;
+}
+
+.navbar-brand img {
+    height: 50px;
+    max-width: 100%;
+}
+
+.navbar-nav {
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Distribute nav items evenly */
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.navbar-nav .nav-item {
+    flex-shrink: 0; /* Prevent shrinking */
+    margin: 0 0.5rem; /* Adjust spacing between items */
+}
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 0.25rem;
+    font-size: 20px;
+    font-family: "metropolis", sans-serif;
+    font-weight:bold;
+    color: white!important;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.navbar.custom-navbar:hover .nav-link,
+.navbar.custom-navbar.menu-open .nav-link {
+    color: black !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Set the color of the hamburger menu lines to black */
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Ensure the hamburger menu stays black on hover */
+}
+
+.navbar-toggler:hover {
+    border: 2px solid black; /* Optional: Add a border around the hamburger menu on hover */
+}
+
+@media (max-width: 1199.98px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.2rem;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0 0.2rem; /* Adjust spacing for smaller screens */
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar.custom-navbar {
+        background-color: transparent !important;
+    }
+
+    .navbar.custom-navbar.menu-open {
+        background-color: rgb(235, 230, 230)!important;
+    }
+
+    .navbar.custom-navbar.menu-open .nav-link {
+        color: black !important;
+    }
+    
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0.25rem 0;
+    }
+
+    .navbar-brand img {
+        height: 40px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .navbar-brand img {
+        height: 30px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.8rem;
+    }
+}
+
+.login-icon {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.dropdown-menu-custom {
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+    width: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Ensures correct positioning */
+    z-index: 1000; /* Ensures it appears above other content */
+}
+
+.dropdown-item-custom {
+    display: flex;
+    flex-direction: row; /* Keep image and text stacked vertically */
+    align-items: center;
+    margin-top: 5px 0; /* Increase margin between items */
+}
+
+.dropdown-image {
+    width: 200px; /* Increase the image size */
+    height: 100px; /* Increase the image size */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.dropdown-item {
+    text-align: left;
+    color: black;
+    font-size: 1rem; /* Increase the text size */
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa !important;
+    color: red;
+    border-radius: 5px; /* Optional: add rounding on hover */
+    transition: background-color 0.3s ease;
+}
+
+body {
+    background-color: #282d33;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://t4.ftcdn.net/jpg/02/55/44/85/240_F_255448522_FIt1mxNqIveRxNB5Ns4scSE5u2er7BdC.jpg');
+    background-repeat: repeat;
+    opacity: 0.3; /* Adjust this value to make it more or less transparent */
+    z-index: -1;
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-image {
+    background-image: url('../images/engxianyu/logoFood.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+    text-align: center;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.hero-text h1 {
+    font-family: 'Lilita One', cursive;
+    font-size: 70px;
+    margin: 0;
+    animation: fadeInDown 1s ease;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-top: 10px;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Restaurant Section */
+#restaurants {
+    background-color: #ffffff;
+    padding: 50px 0;
+    /* font-family: 'Nanum Gothic Coding', monospace;  */
+}
+
+#restaurants h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+.filters {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filter-group {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.filter-group label {
+    font-size: 18px;
+    margin-right: 10px;
+    font-family: Arial, sans-serif; 
+}
+
+.filter-group select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease;
+    font-family: Arial, sans-serif; 
+}
+
+.filter-group select:focus {
+    border-color: #f39c12;
+}
+
+#restaurantList .col {
+    margin-bottom: 30px;
+}
+
+.restaurant-card {
+    font-family: Arial, sans-serif; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.restaurant-card-content {
+    padding: 20px;
+}
+
+.restaurant-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.restaurant-card p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.restaurant-card .btn {
+    background-color: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.restaurant-card .btn:hover {
+    background-color: #e67e22;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    background-color: #fff9e6;
+}
+
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .favorite-icon i {
+    font-size: 20px;
+    color: #f39c12;
+  }
+
+  .floating-food-icon {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    font-size: 40px;
+    animation: float 3s ease-in-out infinite;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.centered-message {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+  }

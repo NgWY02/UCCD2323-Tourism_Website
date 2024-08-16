@@ -1,0 +1,400 @@
+/* Navbar styles */
+.navbar.custom-navbar {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    padding: 0.5rem 1rem;
+    transition: top 0.3s ease-in-out, background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar.custom-navbar:hover {
+    background-color: rgb(235, 230, 230)!important;
+}
+
+.navbar-brand img {
+    height: 50px;
+    max-width: 100%;
+}
+
+.navbar-nav {
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Distribute nav items evenly */
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.navbar-nav .nav-item {
+    flex-shrink: 0; /* Prevent shrinking */
+    margin: 0 0.5rem; /* Adjust spacing between items */
+}
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 0.25rem;
+    font-size: 20px;
+    font-family: "metropolis", sans-serif;
+    color: white!important;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.navbar.custom-navbar:hover .nav-link,
+.navbar.custom-navbar.menu-open .nav-link {
+    color: black !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Set the color of the hamburger menu lines to black */
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Ensure the hamburger menu stays black on hover */
+}
+
+.navbar-toggler:hover {
+    border: 2px solid black; /* Optional: Add a border around the hamburger menu on hover */
+}
+
+@media (max-width: 1199.98px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.2rem;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0 0.2rem; /* Adjust spacing for smaller screens */
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar.custom-navbar {
+        background-color: transparent !important;
+    }
+
+    .navbar.custom-navbar.menu-open {
+        background-color: rgb(235, 230, 230)!important;
+    }
+
+    .navbar.custom-navbar.menu-open .nav-link {
+        color: black !important;
+    }
+    
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0.25rem 0;
+    }
+
+    .navbar-brand img {
+        height: 40px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .navbar-brand img {
+        height: 30px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.8rem;
+    }
+}
+
+.login-icon {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.dropdown-menu-custom {
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+    width: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Ensures correct positioning */
+    z-index: 1000; /* Ensures it appears above other content */
+}
+
+.dropdown-item-custom {
+    display: flex;
+    flex-direction: row; /* Keep image and text stacked vertically */
+    align-items: center;
+    margin-top: 5px 0; /* Increase margin between items */
+}
+
+.dropdown-image {
+    width: 200px; /* Increase the image size */
+    height: 100px; /* Increase the image size */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.dropdown-item {
+    text-align: left;
+    color: black;
+    font-size: 1rem; /* Increase the text size */
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa !important;
+    color: red;
+    border-radius: 5px; /* Optional: add rounding on hover */
+    transition: background-color 0.3s ease;
+}
+
+
+#carouselExampleCaptions, .carousel-inner, .carousel-item {
+    height: 100vh;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-caption {
+    left: 50%;
+    bottom: 20%;
+    transform: translateX(-50%);
+    text-align: center; /* Center text horizontally */
+    width: 80%;
+    max-width: 1200px;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-caption h2 {
+    font-size: 3.5vw;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 10px;
+}
+
+.carousel-caption p {
+    font-size: 1.5vw;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.welcome-section {
+    background: url('images/malaysia_background.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+
+.featured-destinations .card {
+    margin-bottom: 30px;
+}
+
+.map-section .map-container {
+    height: 500px;
+}
+
+.testimonials blockquote {
+    background: #f8f9fa;
+    border-left: 10px solid #007bff;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+@media (max-width: 1200px) {
+    .carousel-caption h2 {
+        font-size: 4vw;
+    }
+    .carousel-caption p {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-caption h2 {
+        font-size: 5vw;
+    }
+    .carousel-caption p {
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h2 {
+        font-size: 6vw;
+    }
+    .carousel-caption p {
+        font-size: 3vw;
+    }
+}
+
+.destinations-title {
+    font-family: 'Allura', cursive;
+    font-size: 4rem;
+    font-weight:bold;
+    background: linear-gradient(to right, #00CFFF, #007BFF); /* Shallow to deep blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fixed-size-card {
+    width: 416px; /* Fixed width */
+    height: 336px; /* Fixed height */
+    overflow: hidden;
+}
+
+.destinations-grid .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-link {
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.card-link:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-family: 'Allura', cursive;
+    font-size: 2.5rem !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-align: center;
+
+}
+
+.card-img-overlay {
+    background-color: transparent !important;
+}
+
+.row {
+    justify-content:center;
+    align-items:center;
+}
+
+.d-flex {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .fixed-size-card {
+        width: 100%;
+        max-width: 416px;
+        height: auto;
+    }
+    .card-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.map-title{
+    font-family: 'Allura',cursive;
+    font-weight:bold;
+    font-size: 4rem;
+    background: linear-gradient(to right, #FF8C00, #FFD700, #ADFF2F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.map-section .map-container {
+    height: 500px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#malaysia-map path {
+    cursor: pointer;
+    transition: fill 0.3s;
+}
+
+#malaysia-map path:hover {
+    fill: #007bff;
+}
+
+.featured-destinations .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.featured-destinations .section-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.featured-destinations .card {
+    border: none;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featured-destinations .card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.featured-destinations .card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.featured-destinations .card-img-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.featured-destinations .card-title {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.featured-destinations .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.featured-destinations .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+

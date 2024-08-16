@@ -1,0 +1,18 @@
+{
+  "name": "ngwy02-uccd2323-front-end-development-assignment",
+  "version": "1.0.0",
+  "description": "A description of your project",
+  "main": "restaurant/server.js",
+  "scripts": {
+    "start": "node restaurant/server.js",
+    "postinstall": "npm install"
+  },
+  "dependencies": {
+    "@googlemaps/google-maps-services-js": "^3.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
