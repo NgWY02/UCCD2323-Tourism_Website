@@ -202,27 +202,6 @@
     width: 5%;
 }
 
-.welcome-section {
-    background: url('images/malaysia_background.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
-}
-
-.featured-destinations .card {
-    margin-bottom: 30px;
-}
-
-.map-section .map-container {
-    height: 500px;
-}
-
-.testimonials blockquote {
-    background: #f8f9fa;
-    border-left: 10px solid #007bff;
-    padding: 15px;
-    margin: 20px 0;
-}
-
 @media (max-width: 1200px) {
     .carousel-caption h2 {
         font-size: 4vw;
@@ -250,6 +229,27 @@
     }
 }
 
+
+.welcome-section {
+    background: url('images/malaysia_background.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+
+.featured-destinations .card {
+    margin-bottom: 30px;
+}
+
+.map-section .map-container {
+    height: 500px;
+}
+
+.testimonials blockquote {
+    background: #f8f9fa;
+    border-left: 10px solid #007bff;
+    padding: 15px;
+    margin: 20px 0;
+}
 .destinations-title {
     font-family: 'Allura', cursive;
     font-size: 4rem;

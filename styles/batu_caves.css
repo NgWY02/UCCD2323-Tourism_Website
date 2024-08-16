@@ -163,7 +163,6 @@
     transition: background-color 0.3s ease;
 }
 
-
 .header-section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/weiyu/batu_caves1.jpg'); 
     background-size: cover;

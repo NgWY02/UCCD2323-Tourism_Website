@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Travel Ideas</title>
+    <link rel="stylesheet" href="../styles/travel_tips.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+                <div class="container">
+                    <a class="navbar-brand custom-logo" href="index.html">
+                        <img src="/images/weiyu/tourism_malaysia_logo.png" alt="Malaysia Tourism Logo" class="d-inline-block align-text-top">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ms-auto custom-nav">
+                            <li class="nav-item">
+                                <a class="fw-bold nav-link" href="about.html">About Malaysia</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="fw-bold nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Destination
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="navbarDropdownMenuLink">
+                                    <li class="dropdown-item-custom">
+                                        <a class="dropdown-item" href="shoppingMall.html">
+                                            <img src="../images/weiyu/1stAvenue.jpg" alt="Shopping Mall" class="dropdown-image">
+                                            Shopping Mall
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-item-custom">
+                                        <a class="dropdown-item" href="restaurant.html">
+                                            <img src="../images/weiyu/food_places.jpeg" alt="Food Places" class="dropdown-image">
+                                            Food Places
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-item-custom">
+                                        <a class="dropdown-item" href="../templates/index.html#popular-places">
+                                            <img src="../images/weiyu/langkawi.png" alt="Popular Place" class="dropdown-image">
+                                            Tourist Destination
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="fw-bold nav-link" href="travel_tips.html">Travel Tips</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="fw-bold nav-link" href="Deals.html">Deals & Packages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="fw-bold nav-link" href="FAQ.html">FAQ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="fw-bold nav-link" href="profile.html" id="profileDropdown">
+                                    <img src="../images/weiyu/login_icon.png" alt="Login Icon" class="login-icon">
+                                    Profile 
+                                </a>
+                                <ul class="dropdown-menu" id="profileMenu">
+                                    <li><a class="dropdown-item" href="login.html">Sign In</a></li>
+                                    <li><a class="dropdown-item" href="register.html">Register</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <img src="../images/tuckseng/GettyImages-165300275-575723eb5f9b5892e80ef420.jpg" alt="Malaysia 1">
+                    <div class="text">Malaysia</div>
+                </div>
+                <div class="mySlides">
+                    <img src="../images/tuckseng/slide_show_img_2.jpeg" alt="Malaysia 2">
+                    <div class="text">Malaysia</div>
+                </div>
+                <div class="mySlides">
+                    <img src="../images/tuckseng/malaysia.jpg" alt="Malaysia 3">
+                    <div class="text">Malaysia</div>
+                </div>
+                <div class="mySlides">
+                    <img src="../images/tuckseng/thumb-1920-1083761.jpg" alt="Malaysia 4">
+                    <div class="text">Malaysia</div>
+                </div>
+        
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div class="trip-container">
+                <div class="trip-form">
+                    <h2>Here are some tips for your trip...</h2>
+                    <h2>State</h2>
+                    <select id="state-select">
+                        <option value="">Select State</option>
+                        <option value="Perak">Perak</option>
+                        <option value="Terengganu">Terengganu</option>
+                        <option value="Selangor">Selangor</option>
+                        <option value="Melaka">Melaka</option>
+                        <option value="Johor">Johor</option>
+                        <option value="Kedah">Kedah</option>
+                        <option value="Kelantan">Kelantan</option>
+                        <option value="Pahang">Pahang</option>
+                        <option value="Perlis">Perlis</option>
+                        <option value="Negeri Sembilan">Negeri Sembilan</option>
+                        <option value="Penang">Penang</option>
+                        <option value="Sabah">Sabah</option>
+                        <option value="Sarawak">Sarawak</option>
+                        </select>
+        
+                    <h2>Duration</h2>
+                    <div class="duration-options">
+                        <label>
+                            <input type="radio" name="duration" value="3d2n"> 3 Days 2 Nights
+                        </label>
+                        <label>
+                            <input type="radio" name="duration" value="4d3n"> 4 Days 3 Nights
+                        </label>
+                    </div>
+                </div>
+        
+                <div class="trip-cards">
+                    <div class="trip-card" data-state="Perak" data-duration="4d3n" onclick="window.location.href= '4d3n_Perak.html';">
+                        <img src="../images/tuckseng/perak.jpg" alt="Perak">
+                        <div class="trip-info">
+                            <h3>4D3N: <br>Exploring Perak...</h3>
+                        </div>
+                    </div>
+                    <div class="trip-card" data-state="Terengganu" data-duration="3d2n" onclick="window.location.href='3d2n_Terengganu.html';">
+                        <img src="../images/tuckseng/terengganu.jpg" alt="Terengganu">
+                        <div class="trip-info">
+                            <h3>3D2N: Wonderful Experience in Terengganu</h3>
+                        </div>
+                    </div>
+                    <div class="trip-card" data-state="Selangor" data-duration="4d3n" onclick="window.location.href='4d3n_Selangor.html';">
+                        <img src="../images/tuckseng/Selangor.jpg" alt="Selangor">
+                        <div class="trip-info">
+                            <h3>4D3N: A break at Selangor...</h3>
+                        </div>
+                    </div>
+                    <div class="trip-card" data-state="Melaka" data-duration="3d2n" onclick="window.location.href='3d2n_Melaka.html';">
+                        <img src="../images/tuckseng/melaka.jpg" alt="Melaka">
+                        <div class="trip-info">
+                            <h3>3D2N: Welcome to Melaka!</h3>
+                        </div>
+                    </div>
+                    <div class="trip-card" data-state="Johor" data-duration="4d3n" onclick="window.location.href='4d3n_Johor.html';">
+                        <img src="../images/tuckseng/johor_trip_card.jpg" alt="Johor">
+                        <div class="trip-info">
+                            <h3>4D3N: Pay a visit at Johor...</h3>
+                        </div>
+                    </div>
+                    <div class="trip-card" data-state="Kedah" data-duration="3d2n" onclick="window.location.href='3d2n_Kedah.html';">
+                        <img src="../images/tuckseng/kedah.jpg" alt="Kedah">
+                        <div class="trip-info">
+                            <h3>3D2N: Kedah's trip begins here...</h3>
+                        </div>
+                    </div>
+                    <div class="trip-card" data-state="Kelantan" data-duration="4d3n" onclick="window.location.href='4d3n_Kelantan.html';">
+                        <img src="../images/tuckseng/kelantan.jpg" alt="Kelantan">
+                        <div class="trip-info">
+                            <h3>4D3N: A step closer to Kelantan</h3>
+                        </div>
+                    </div>
+                    <div class="trip-card" data-state="Pahang" data-duration="3d2n" onclick="window.location.href='3d2n_Pahang.html';">
+                        <img src="../images/tuckseng/pahang.jpg" alt="Pahang">
+                        <div class="trip-info">
+                            <h3>3D2N: One step to Pahang</h3>
+                        </div>
+                    </div>
+                    <div class="trip-card" data-state="Perlis" data-duration="4d3n" onclick="window.location.href='4d3n_Perlis.html';">
+                        <img src="../images/tuckseng/perlis.jpg" alt="Perlis">
+                        <div class="trip-info">
+                            <h3>3D2N: Take a look at Perlis...</h3>
+                        </div>
+                    </div>
+                    <div class="trip-card" data-state="Negeri Sembilan" data-duration="3d2n" onclick="window.location.href='3d2n_N9.html';">
+                        <img src="../images/tuckseng/N9.jpeg" alt="Negeri Sembilan">
+                        <div class="trip-info">
+                            <h3>3D2N: Something different at Negeri Sembilan...</h3>
+                        </div>
+                    </div>
+                    <div class="trip-card" data-state="Penang" data-duration="4d3n" onclick="window.location.href='4d3n_Penang.html';">
+                        <img src="../images/tuckseng/penang.jpg" alt="Penang">
+                        <div class="trip-info">
+                            <h3>3D2N: Discover some different at Penang...</h3>
+                        </div>
+                    </div>
+                    <div class="trip-card" data-state="Sabah" data-duration="3d2n" onclick="window.location.href='3d2n_Sabah.html';">
+                        <img src="../images/tuckseng/sabah.jpg" alt="Sabah">
+                        <div class="trip-info">
+                            <h3>3D2N: Did you ever hear about Sabah?</h3>
+                        </div>
+                    </div>
+                    <div class="trip-card" data-state="Sarawak" data-duration="4d3n" onclick="window.location.href='4d3n_Sarawak.html';">
+                        <img src="../images/tuckseng/sarawak.jpg" alt="Sarawak">
+                        <div class="trip-info">
+                            <h3>3D2N: Sarawak is just next to Sabah...</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <footer class="footer py-4 bg-dark text-white">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Contact Us</h5>
+                        <p>Email: info@tourismmalaysia.com</p>
+                        <p>Phone: +60 3-1234 5678</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Follow Us</h5>
+                        <a href="https://www.facebook.com/malaysia.travel.my" class="text-white me-2"><i class="fab fa-facebook "></i></a>
+                        <a href="https://twitter.com/TourismMalaysia?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/malaysia.truly.asia/?hl=en" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="about.html" class="text-white">About Malaysia</a></li>
+                            <li><a href="Deals.html" class="text-white">Deals & Packages</a></li>
+                            <li><a href="login.html" class="text-white">Sign In</a></li>
+                            <li><a href="FAQ.html" class="text-white">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="mt-3">&copy; 2024 Tourism Malaysia. All Rights Reserved.</p>
+            </div>
+        </footer>
+        <script src="../scripts/travel_tips.js" defer></script>
+        <script src="../scripts/navbar.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" defer></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
+    </body>
+</html>

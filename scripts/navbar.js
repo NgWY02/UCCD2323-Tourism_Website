@@ -98,6 +98,4 @@ document.addEventListener('DOMContentLoaded', function() {
             profileMenu.style.display = "none";
         }
     });   
-    
-    
 });

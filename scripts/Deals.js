@@ -228,5 +228,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('sortState').addEventListener('change', function() {
         filterDealsByState(this.value);
     });
+    
 
 });

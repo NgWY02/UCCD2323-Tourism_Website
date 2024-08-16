@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Malaysia</title>
+    <link rel="stylesheet" href="../styles/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+            <div class="container">
+                <a class="navbar-brand custom-logo" href="index.html">
+                    <img src="/images/weiyu/tourism_malaysia_logo.png" alt="Malaysia Tourism Logo" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto custom-nav">
+                        <li class="nav-item">
+                            <a class="fw-bold nav-link" href="about.html">About Malaysia</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="fw-bold nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Destination
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="navbarDropdownMenuLink">
+                                <li class="dropdown-item-custom">
+                                    <a class="dropdown-item" href="shoppingMall.html">
+                                        <img src="../images/weiyu/1stAvenue.jpg" alt="Shopping Mall" class="dropdown-image">
+                                        Shopping Mall
+                                    </a>
+                                </li>
+                                <li class="dropdown-item-custom">
+                                    <a class="dropdown-item" href="restaurant.html">
+                                        <img src="../images/weiyu/food_places.jpeg" alt="Food Places" class="dropdown-image">
+                                        Food Places
+                                    </a>
+                                </li>
+                                <li class="dropdown-item-custom">
+                                    <a class="dropdown-item" href="../templates/index.html#popular-places">
+                                        <img src="../images/weiyu/langkawi.png" alt="Popular Place" class="dropdown-image">
+                                        Tourist Destination
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="fw-bold nav-link" href="travel_tips.html">Travel Tips</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="fw-bold nav-link" href="Deals.html">Deals & Packages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="fw-bold nav-link" href="FAQ.html">FAQ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="fw-bold nav-link" href="profile.html" id="profileDropdown">
+                                <img src="../images/weiyu/login_icon.png" alt="Login Icon" class="login-icon">
+                                Profile 
+                            </a>
+                            <ul class="dropdown-menu" id="profileMenu">
+                                <li><a class="dropdown-item" href="login.html">Sign In</a></li>
+                                <li><a class="dropdown-item" href="register.html">Register</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <br>
+    <br>
+    
+    <p><strong><h2>States in Malaysia</h2></strong></p>
+
+    <!-- States Section -->
+    <div class="states-container">
+        <div class="state-box" onclick="openModal('modal1')">
+            <img src="../images/tuckseng/Perak.jpeg" alt="PERAK"> 
+            <p>PERAK</p>
+        </div>
+            <div class="state-box" onclick="openModal('modal2')">
+                <img src="../images/tuckseng/Masjid-Kristal-Kuala-Terengganu.jpg" alt="TERENGGANU"> 
+                <p>TERENGGANU</p>
+            </div>
+            <div class="state-box" onclick="openModal('modal3')">
+                <img src="../images/tuckseng/selangor.jpg" alt="SELANGOR">
+                <p>SELANGOR</p>
+            </div>
+            <div class="state-box" onclick="openModal('modal4')">
+                <img src="../images/tuckseng/melaka.jpeg" alt="MELAKA">
+                <p>MELAKA</p>
+            </div>
+            <div class="state-box" onclick="openModal('modal5')">
+                <img src="../images/tuckseng/johor.jpg" alt="JOHOR">
+                <p>JOHOR</p>
+            </div>
+    </div>
+
+    <br>
+
+
+    <div class="states-container">
+        <div class="state-box" onclick="openModal('modal6')">
+            <img src="../images/tuckseng/kedah-malaysia.jpg" alt="KEDAH">
+            <p>KEDAH</p>
+        </div>
+        <div class="state-box" onclick="openModal('modal7')">
+            <img src="../images/tuckseng/kelantan.jpg" alt="KELANTAN">
+            <p>KELANTAN</p>
+        </div>
+        <div class="state-box" onclick="openModal('modal8')">
+            <img src="../images/tuckseng/pahang.jpg" alt="PAHANG">
+            <p>PAHANG</p>
+        </div>
+        <div class="state-box" onclick="openModal('modal9')">
+            <img src="../images/tuckseng/perlis.jpeg" alt="PERLIS">
+            <p>PERLIS</p>
+        </div>
+        <div class="state-box" onclick="openModal('modal10')">
+            <img src="../images/tuckseng/negeri_9.jpg" alt="NEGERI SEMBILAN">
+            <p>NEGERI SEMBILAN</p>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="states-container">
+        <div class="state-box" onclick="openModal('modal11')">
+            <img src="../images/tuckseng/penang.jpg" alt="PENANG">
+            <p>PENANG</p>
+        </div>
+        <div class="state-box" onclick="openModal('modal12')">
+            <img src="../images/tuckseng/sabah.jpg" alt="SABAH">
+            <p>SABAH</p>
+        </div>
+        <div class="state-box" onclick="openModal('modal13')">
+            <img src="../images/tuckseng/sarawak.jpg" alt="SARAWAK">
+            <p>SARAWAK</p>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- Geography Section -->
+    <section id="geography-section">
+        <h2>Geography</h2>
+        
+        <p>Malaysia is located in Southeast Asia, split into two distinct regions:
+        <b>Peninsular Malaysia</b>: This western part occupies the southern tip of the Malay Peninsula, bordering Thailand to the north and Singapore to the south. 
+        It is surrounded by the Strait of Malacca to the west and the South China Sea to the east.</p>
+    </section>
+
+    <img src="../images/tuckseng/malaysia_geo.jpeg" width="500" height="500">
+
+    <br><br><br>
+
+    <section id="people-and-culture-section">
+        <h2>People and Culture</h2>
+        
+        <p>Malaysia is a multicultural country with a population comprising primarily Malays, Chinese, Indians, and various indigenous groups. <br><br>The Malays, who are predominantly Muslim, form the largest ethnic group and influence the national culture, including language, cuisine, and customs. <br><br>The Chinese, mostly Buddhists or Taoists, are known for their entrepreneurial spirit and contribute significantly to the economy, while the Indians, mainly Hindus, enrich the cultural landscape with festivals like Deepavali and traditional arts. <br><br>Indigenous groups in Sabah and Sarawak add further diversity with their unique traditions and languages, making Malaysia a vibrant mosaic of cultures and religions.
+        </p>
+    </section>
+
+    <img src="../images/tuckseng/1_Malaysia.jpeg" alt="People and Culture">
+
+    <br><br><br>
+
+    <section id="language-section">
+        <h2>National Language</h2>
+        <img>
+        <p>
+            The national language of Malaysia is <b>Bahasa Malaysia</b>, also known as <b>Malay</b>. It is the most widely spoken language in the country and serves as a unifying medium across its diverse ethnic groups. Bahasa Malaysia is used in government, education, and the media, and it is written in the Latin alphabet. The language reflects the country’s Malay cultural heritage and includes influences from Arabic, Sanskrit, Tamil, and English, making it an essential aspect of Malaysian identity and communication.
+        </p>
+    </section>
+
+    <img src="../images/tuckseng/talking.jpg">
+
+    <br><br><br>
+
+    <section id="climate">
+        <h2>Area & Climate</h2>
+        <img>
+        <p>
+            Malaysia covers an area of approximately 330,000 square kilometers, consisting of Peninsular Malaysia and East Malaysia on the island of Borneo. The country has a tropical climate characterized by high humidity, consistent temperatures ranging from 25°C to 32°C, and significant rainfall throughout the year, especially during the monsoon seasons. The equatorial location gives Malaysia lush rainforests, diverse ecosystems, and a generally warm climate, with coastal regions experiencing slightly more moderate temperatures due to sea breezes.
+        </p>
+    </section>
+
+    <img src="../images/tuckseng/climate.jpg">
+
+    <br><br><br>
+
+    <!-- Modals for State Details -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h4><img src="../images/tuckseng/Perak.jpeg" alt="PERAK" width="50">Perak</h4>
+            <p>
+                <b>Capital:</b> Ipoh
+                <br><br>
+                <b>Location:</b> Northwest of Peninsular Malaysia
+                <br><br>
+                <b>History:</b> Perak has a rich history rooted in its tin mining industry, which made it one of the wealthiest states in Malaysia during the 19th and early 20th centuries. The state was also a key battleground during the Perak War (1875-1876), a conflict against British colonial forces following the assassination of British Resident J.W.W. Birch. Perak is home to the royal town of Kuala Kangsar, where the Perak Sultanate has its seat. The state’s cultural heritage includes notable architectural landmarks such as the Ubudiah Mosque and the Istana Kenangan.
+                <br><br>
+                <b>Highlights:</b> Perak offers stunning natural attractions like the Belum-Temengor Forest Reserve and Gua Tempurung. Ipoh, the capital, is known for its colonial-era architecture and vibrant food scene.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h4><img src="../images/tuckseng/Masjid-Kristal-Kuala-Terengganu.jpg" alt="TERENGGANU" width="50">TERENGGANU</h4>
+            <p>
+                <b>Capital:</b> Kuala Terengganu
+                <br><br>
+                <b>Location:</b> Eastern coast of Peninsular Malaysia
+                <br><br>
+                <b>History:</b> Terengganu was one of the earliest Malay states to adopt Islam, evidenced by the discovery of the Terengganu Inscription Stone dated 1303. The state became a protectorate of the British in the 19th century. Terengganu is known for its traditional crafts, particularly batik and songket weaving, as well as its role in the fishing industry.
+                <br><br>
+                <b>Highlights:</b> Terengganu is famous for its idyllic islands, including Pulau Redang and Pulau Perhentian, which are popular for diving and snorkeling. The state’s cultural heritage is showcased in the Terengganu State Museum and various traditional markets.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h4><img src="../images/tuckseng/Selangor_Box_pic.jpg" alt="SELANGOR" width="50">SELANGOR</h4>
+            <p>
+                <b>Capital:</b> Shah Alam (royal capital is Klang)
+                <br><br>
+                <b>Location:</b> Central region of Peninsular Malaysia
+                <br><br>
+                <b>History:</b> Selangor was historically known for its tin mines and rubber plantations, which attracted British interest in the 19th century. The state experienced rapid modernization and urbanization, particularly after Malaysia's independence. It is the most developed and populous state in Malaysia, encompassing Kuala Lumpur (though KL is a separate federal territory). Selangor played a key role in the country's industrialization.
+                <br><br>
+                <b>Highlights:</b> Selangor is home to major urban centers like Petaling Jaya, Subang Jaya, and Shah Alam. It also features tourist spots such as the Batu Caves, Sunway Lagoon, and the National Zoo.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h4><img src="../images/tuckseng/melaka_box_pic.jpeg" alt="MELAKA" width="50">MELAKA</h4>
+            <p>
+                <b>Capital:</b> Malacca City
+                <br><br>
+                <b>Location:</b> Southern region of Peninsular Malaysia
+                <br><br>
+                <b>History:</b> Malacca has a rich history as one of Southeast Asia's most important trading ports during the 15th century under the Malacca Sultanate. It was later colonized by the Portuguese, Dutch, and British, each leaving a lasting influence on the state’s architecture, culture, and cuisine. Malacca’s history is central to Malaysia’s national identity, and the state played a key role in the spread of Islam in the region.
+                <br><br>
+                <b>Highlights:</b> Malacca City is a UNESCO World Heritage Site, known for its historical landmarks like A Famosa, St. Paul’s Hill, and the Dutch Square. The city’s vibrant street art, museums, and Peranakan (Baba-Nyonya) culture are major attractions.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <h4><img src="../images/tuckseng/johor_box_pic.webp" alt="JOHOR" width="50">JOHOR</h4>
+            <p>
+                <b>Capital:</b> Johor Bahru
+                <br><br>
+                <b>Location:</b> Southernmost state of Peninsular Malaysia
+                <br><br>
+                <b>History:</b> Johor is one of the most strategically located states, with its proximity to Singapore. The Johor Sultanate was established in the early 16th century after the fall of the Malacca Sultanate to the Portuguese. Johor played a significant role in the regional trade and politics of the Malay Archipelago. It was the last of the Malay states to accept British advisors, maintaining relative independence until the early 20th century.
+                <br><br>
+                <b>Highlights:</b> Johor is known for its economic strength, particularly in manufacturing and agriculture. Tourist attractions include the Legoland Malaysia Resort, the Endau-Rompin National Park, and the historic city of Johor Bahru.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal6')">&times;</span>
+            <h4><img src="../images/tuckseng/kedah_box_pic.jpg" alt="KEDAH" width="50">KEDAH</h4>
+            <p>
+                <b>Capital:</b> Alor Setar
+                <br><br>
+                <b>Location:</b> Northern region of Peninsular Malaysia
+                <br><br>
+                <b>History:</b> Kedah is one of the oldest states in Malaysia, with a history dating back over 2,000 years. It was an important center for ancient Hindu-Buddhist civilizations and later became an Islamic Sultanate in the 12th century. Kedah was subject to Siamese (Thai) influence before becoming a British protectorate in the 19th century. The state is often referred to as the "Rice Bowl of Malaysia" due to its extensive paddy fields.
+                <br><br>
+                <b>Highlights:</b> Notable for its agricultural landscape, especially rice paddies, Kedah also boasts the beautiful Langkawi archipelago, which is a major tourist attraction.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal7')">&times;</span>
+            <h4><img src="../images/tuckseng/kelantan_box_pic.jpg" alt="KELANTAN" width="50">KELANTAN</h4>
+            <p>
+                <b>Capital:</b> Kota Bharu
+                <br><br>
+                <b>Location:</b> Northeastern region of Peninsular Malaysia
+                <br><br>
+                <b>History:</b> Kelantan has a strong cultural identity, often referred to as the "Cradle of Malay Culture." It has a long history of trade with China and Southeast Asia. Kelantan was a tributary state to Siam before becoming a British protectorate. The state is known for its adherence to Malay customs, Islamic practices, and traditional arts like wayang kulit (shadow puppetry) and dikir barat (a form of choral singing).
+                <br><br>
+                <b>Highlights:</b> Kelantan’s attractions include the vibrant Siti Khadijah Market, the cultural village of Kampung Laut, and the scenic beaches along its coast. The state is also a gateway to Thailand.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal8')">&times;</span>
+            <h4><img src="../images/tuckseng/pahang_box_pic.jpg" alt="PAHANG" width="50">PAHANG</h4>
+            <p>
+                <b>Capital:</b> Kuantan
+                <br><br>
+                <b>Location:</b> Eastern region of Peninsular Malaysia
+                <br><br>
+                <b>History:</b> Pahang has a history intertwined with the Malacca Sultanate and later, the Johor-Riau Sultanate. The state became a British protectorate in the late 19th century. Pahang is rich in natural resources, particularly timber and tin, and is the largest state in Peninsular Malaysia. It has a diverse cultural heritage, with influences from Malay, Orang Asli, and immigrant communities.
+                <br><br>
+                <b>Highlights:</b> Pahang is known for its natural beauty, including the Cameron Highlands, Taman Negara (one of the oldest rainforests in the world), and the pristine beaches of Cherating.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal9" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal9')">&times;</span>
+            <h4><img src="../images/tuckseng/perlis_box_pic.webp" alt="PERLIS" width="50">PERLIS</h4>
+            <p>
+                <b>Capital:</b> Kangar
+                <br><br>
+                <b>Location:</b> Northernmost state of Peninsular Malaysia
+                <br><br>
+                <b>History:</b> Perlis was originally part of Kedah before becoming a separate entity under Siamese rule in the 19th century. It later came under British control and was eventually integrated into the Federation of Malaya in 1957. Perlis is the smallest state in Malaysia, known for its quiet and laid-back atmosphere.
+                <br><br>
+                <b>Highlights:</b> Perlis offers scenic attractions like the Wang Kelian State Park and the limestone caves of Gua Kelam. The state’s agricultural industry is significant, particularly in sugarcane production.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal10" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal10')">&times;</span>
+            <h4><img src="../images/tuckseng/NEGERI-SEMBILAN_box_pic.jpg" alt="NEGERI SEMBILAN" width="50">NEGERI SEMBILAN</h4>
+            <p>
+                <b>Capital:</b> Seremban
+                <br><br>
+                <b>Location:</b> South of Selangor, in the central region of Peninsular Malaysia
+                <br><br>
+                <b>History:</b> Negeri Sembilan is unique for its Minangkabau cultural heritage, which originated from migrants from West Sumatra, Indonesia. The state is known for its adat perpatih matrilineal system, which influences the social and political structure, including the election of its ruler, the Yang di-Pertuan Besar. It became part of the Federated Malay States under British rule in the late 19th century.
+                <br><br>
+                <b>Highlights:</b> Negeri Sembilan is known for its traditional Minangkabau architecture with distinctive curved roofs. Attractions include the Seremban Lake Gardens and the coastal town of Port Dickson, a popular beach destination.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal11" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal11')">&times;</span>
+            <h4><img src="../images/tuckseng/penang_box_picwebp.webp" alt="PENANG" width="50">PENANG</h4>
+            <p>
+                <b>Capital:</b> George Town
+                <br><br>
+                <b>Location:</b> Northern coast of Peninsular Malaysia, comprising Penang Island and Seberang Perai on the mainland.
+                <br><br>
+                <b>History:</b> Penang was founded in 1786 by Captain Francis Light of the British East India Company as a trading post. The island became a crucial port for British trade in Southeast Asia, leading to the development of George Town as a vibrant multicultural city. George Town's rich history and well-preserved colonial architecture have earned it UNESCO World Heritage status. Penang also played a significant role in Malaysia's struggle for independence, with many of its intellectuals and political leaders contributing to the anti-colonial movement.
+                <br><br>
+                <b>Highlights:</b> Known for its cultural diversity, Penang is famous for its street food, historic buildings, and scenic beaches. The Penang Hill and Kek Lok Si Temple are popular tourist destinations.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal12" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal12')">&times;</span>
+            <h4><img src="../images/tuckseng/sabah_box_pic.jpg" alt="SABAH" width="50">SABAH</h4>
+            <p>
+                <b>Capital:</b> Kota Kinabalu
+                <br><br>
+                <b>Location:</b> Northern part of the island of Borneo
+                <br><br>
+                <b>History:</b> Sabah, formerly known as North Borneo, was under the rule of the Sultanate of Brunei and later the Sulu Sultanate before becoming a British protectorate in the 19th century. Sabah joined Malaysia in 1963, along with Sarawak and Singapore. The state has a diverse population, including many indigenous groups with their own languages and cultures.
+                <br><br>
+                <b>Highlights:</b> Sabah is known for its biodiversity, with attractions like Mount Kinabalu, the highest peak in Southeast Asia, and the pristine Sipadan Island, famous for diving. The state’s cultural diversity is celebrated in events like the Sabah Fest.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal13" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal13')">&times;</span>
+            <h4><img src="../images/tuckseng/sarawak_box_pic.jpg" alt="SARAWAK" width="50">SARAWAK</h4>
+            <p>
+                <b>Capital: </b>Kuching
+                <br><br>
+                <b>Location:</b> Northwestern part of the island of Borneo
+                <br><br>
+                <b>History:</b> Sarawak was ruled by the White Rajahs, the Brooke family, from 1841 to 1946, before becoming a British Crown Colony. Sarawak joined Malaysia in 1963. The state is home to numerous indigenous groups, each with distinct languages and traditions. Sarawak has a unique political and cultural history, with a strong emphasis on preserving its heritage.
+                <br><br>
+                <b>Highlights:</b> Sarawak is renowned for its natural wonders, including the Mulu Caves, a UNESCO World Heritage Site, and the dense rainforests that are home to diverse wildlife. Kuching, the capital, is known for its colonial architecture and the annual Rainforest World Music Festival.
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Footer Section -->
+<footer class="footer py-4 bg-dark text-white">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p>Email: info@tourismmalaysia.com</p>
+                <p>Phone: +60 3-1234 5678</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <a href="https://www.facebook.com/malaysia.travel.my" class="text-white me-2"><i class="fab fa-facebook "></i></a>
+                <a href="https://twitter.com/TourismMalaysia?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/malaysia.truly.asia/?hl=en" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="about.html" class="text-white">About Malaysia</a></li>
+                    <li><a href="Deals.html" class="text-white">Deals & Packages</a></li>
+                    <li><a href="login.html" class="text-white">Sign In</a></li>
+                    <li><a href="FAQ.html" class="text-white">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="mt-3">&copy; 2024 Tourism Malaysia. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
+<script src="../scripts/about.js"> defer</script>
+<script src="../scripts/navbar.js" defer></script>
+</body>
+</html>        
