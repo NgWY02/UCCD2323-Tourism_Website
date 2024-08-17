@@ -163,9 +163,10 @@
 }
 .hero {
     background-image: url("../images/weiyu/mount_kinabalu.jpg");
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    height: 60vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -186,3 +187,23 @@
     margin: 0 auto; /* Center the image horizontally */
     display: block;
 }
+/* Fade-in effect */
+#map.map-section.py5.text-center,
+#about.section.section.bg-light,
+.section.bg-light,
+.section,
+.img {
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly down */
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+#map.map-section.py5.text-center.fade-in,
+#about.section.bg-light.fade-in,
+.section.bg-light.fade-in,
+.section.fade-in,
+.img.fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+}
+

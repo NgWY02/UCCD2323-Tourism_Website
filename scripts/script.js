@@ -165,6 +165,27 @@ $(document).ready(function() {
     setTimeout(() => {
         map.invalidateSize();
     }, 100);
+    const elementsToFadeIn = document.querySelectorAll('section, img');
+
+    const observerOptions = {
+        threshold: 0.1, // Trigger when 10% of the element is in view
+        rootMargin: '0px 0px -20px 0px' // Adjust to trigger slightly before full visibility
+    };
+
+    const fadeInObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-visible');
+            } else {
+                entry.target.classList.remove('fade-in-visible'); // Remove class when not in view to allow re-triggering
+            }
+        });
+    }, observerOptions)
+
+    elementsToFadeIn.forEach(element => {
+        element.classList.add('fade-in'); // Add fade-in class to all selected elements
+        fadeInObserver.observe(element);
+    });
 });
 
 
