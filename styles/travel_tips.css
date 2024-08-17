@@ -322,12 +322,16 @@ tr:nth-child(even) {
     box-sizing: border-box;
     opacity: 0; /* Initially hidden */
     transform: translateY(20px); /* Start slightly below */
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .trip-card.fade-in {
     opacity: 1;
     transform: translateY(0); /* Move into position */
+}
+.trip-card:hover {
+    transform: scale(1.05); /* Scale up slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
 .trip-card:nth-child(5n + 1) { /* Target every 5th card starting from the 1st */
