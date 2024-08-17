@@ -84,8 +84,8 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "MIICO Hotel: Comfort & Luxury",
             description: "A luxurious stay at MIICO Hotel with top-notch amenities.",
             price: "RM230",
-            images: ["johor6.jpeg.avif", "johorhotel1.jpeg.avif", "johorhotel3.jpeg.webp", "johorhotel4.jpeg.avif","johorhotel5.jpeg.webp"],
-            backgroundImage: "johorhotel7.jpeg.avif",
+            images: [ "johorhotel1.jpg", "johorhotel3.jpg", "johorhotel4.jpg","johorhotel5.jpg","johorhotel2.jpg"],
+            backgroundImage: "johorhotel7.jpg",
             included: [
                 "Complimentary breakfast",
                 "Free Wi-Fi",
