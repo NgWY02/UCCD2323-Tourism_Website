@@ -229,23 +229,12 @@
     }
 }
 
-
 .welcome-section {
     background: url('images/malaysia_background.jpg') no-repeat center center;
     background-size: cover;
     color: white;
 }
 
-.featured-destinations .card {
-    margin-bottom: 30px;
-}
-
-.testimonials blockquote {
-    background: #f8f9fa;
-    border-left: 10px solid #007bff;
-    padding: 15px;
-    margin: 20px 0;
-}
 .destinations-title {
     font-family: 'Allura', cursive;
     font-size: 4rem;
@@ -313,33 +302,21 @@
     }
 }
 
-.map-title{
-    font-family: 'Allura',cursive;
-    font-weight:bold;
+.section-title {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-family: 'Allura', cursive;
     font-size: 4rem;
-    background: linear-gradient(to right, #FF8C00, #FFD700, #ADFF2F);
+    font-weight:bold;
+    background: linear-gradient(to right, #02191f, #007BFF); /* Shallow to deep blue gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
 }
 
-.map-section {
-    padding: 2rem; /* Add padding around the section */
-    text-align: center;
-}
 
-.map-container {
-    height: 500px; /* Fixed height for the map */
-    width: 100%;   /* Full width within its container */
-    max-width: 1200px; /* Maximum width to keep the map within a defined size */
-    margin: 0 auto; /* Center the map container */
-    position: relative; /* Ensure proper positioning */
-    border: 2px solid #ddd; /* Optional: Add a border for visual boundaries */
-    overflow: hidden; /* Prevent the map from overflowing */
-}
-
-.container-map {
-    max-width: 1200px; /* Ensure the container width */
-    margin: 0 auto; /* Center the container */
+.featured-destinations .card {
+    margin-bottom: 30px;
 }
 
 .featured-destinations .section-title {
@@ -404,18 +381,6 @@
     text-align: center; /* Center-align title */
 }
 
-.section-title {
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    font-family: 'Allura', cursive;
-    font-size: 4rem;
-    font-weight:bold;
-    background: linear-gradient(to right, #02191f, #007BFF); /* Shallow to deep blue gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-}
-
 .blog-slider {
     position: relative;
     width: 100%;
@@ -477,6 +442,28 @@
         margin-right: 0;
     }
 }
+
+.map-title{
+    font-family: 'Allura',cursive;
+    font-weight:bold;
+    font-size: 4rem;
+    background: linear-gradient(to right, #FF8C00, #FFD700, #ADFF2F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#map{
+    width:1000px;
+    height:500px;
+}
+
+.testimonials blockquote {
+    background: #f8f9fa;
+    border-left: 10px solid #007bff;
+    padding: 15px;
+    margin: 20px 0;
+}
+
 /* Fade-in effect for sections and images */
 .fade-in {
     opacity: 0;
@@ -488,5 +475,6 @@
     opacity: 1;
     transform: translateY(0); /* Moves back to the original position */
 }
+
 
 

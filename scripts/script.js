@@ -79,15 +79,11 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    // Initialize the map
-    const map = L.map('map').setView([3.139, 101.6869], 13);
+    const map = L.map('map').setView([3.139, 101.6869], 13); // Default view for Kuala Lumpur
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
-
-    // Ensure the map resizes properly
-    map.invalidateSize();
 
     let userLocationMarker = null;
 
@@ -161,31 +157,4 @@ $(document).ready(function() {
         .bindPopup('Default Location')
         .openPopup();
 
-    // Trigger the resize event to make sure the map fits the container
-    setTimeout(() => {
-        map.invalidateSize();
-    }, 100);
-    const elementsToFadeIn = document.querySelectorAll('section, img');
-
-    const observerOptions = {
-        threshold: 0.1, // Trigger when 10% of the element is in view
-        rootMargin: '0px 0px -20px 0px' // Adjust to trigger slightly before full visibility
-    };
-
-    const fadeInObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in-visible');
-            } else {
-                entry.target.classList.remove('fade-in-visible'); // Remove class when not in view to allow re-triggering
-            }
-        });
-    }, observerOptions)
-
-    elementsToFadeIn.forEach(element => {
-        element.classList.add('fade-in'); // Add fade-in class to all selected elements
-        fadeInObserver.observe(element);
-    });
 });
-
-
