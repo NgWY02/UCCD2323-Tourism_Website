@@ -1,66 +1,89 @@
+// Trip filtering based on state and duration
 const stateSelect = document.getElementById('state-select');
 const durationRadios = document.querySelectorAll('input[name="duration"]');
 const tripCards = document.querySelectorAll('.trip-card');
-        
+const tripForm = document.querySelector('.trip-form');
+const tripContainer = document.querySelector('.trip-container');
+
 stateSelect.addEventListener('change', filterTrips);
 durationRadios.forEach(radio => radio.addEventListener('change', filterTrips));
-        
+
 function filterTrips() {
     const selectedState = stateSelect.value;
     const selectedDuration = document.querySelector('input[name="duration"]:checked')?.value;
-        
+
     tripCards.forEach(card => {
-    const cardState = card.dataset.state;
-    const cardDuration = card.dataset.duration;
-        
-    const stateMatch = selectedState === '' || cardState === selectedState;
-    const durationMatch = selectedDuration === undefined || cardDuration === selectedDuration;
-        
-    if (stateMatch && durationMatch) {
-        card.style.display = 'block';
-    } else {
-        card.style.display = 'none';
+        const cardState = card.dataset.state;
+        const cardDuration = card.dataset.duration;
+
+        const stateMatch = selectedState === '' || cardState === selectedState;
+        const durationMatch = selectedDuration === undefined || cardDuration === selectedDuration;
+
+        if (stateMatch && durationMatch) {
+            card.style.display = 'block';
+            // Add fade-in effect when cards are displayed
+            setTimeout(() => {
+                card.classList.add('fade-in');
+            }, 10);  // Small delay to trigger transition
+        } else {
+            card.style.display = 'none';
+            card.classList.remove('fade-in');  // Remove fade-in for hidden cards
         }
     });
 }
-// Slideshow script
+
+// Slideshow script with fade-in effect
 let slideIndex = 0;
-showSlides();
-        
+let slides = document.getElementsByClassName("mySlides");
+let timer;
+
 function showSlides() {
-    let slides = document.getElementsByClassName("mySlides");
+    // Hide all slides and reset opacity
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-        slides[slideIndex-1].style.display = "block";
-        setTimeout(showSlides, 4000); // Change image every 4 seconds
-    }
-        
-    function plusSlides(n) {
-        slideIndex += n - 1; // Adjust index manually
-        showSlides();
-    }
-        
-    // Modal script
-    function openModal(modalId) {
-        document.getElementById(modalId).style.display = "block";
-    }
-        
-    function closeModal(modalId) {
-        document.getElementById(modalId).style.display = "none";
+        slides[i].style.opacity = 0;
+        slides[i].style.transition = "opacity 1s ease-in-out";
     }
 
-    // Toggle menu script
-    function toggleMenu() {
-        const menu = document.getElementById("menu");
-        if (menu.style.display === "block") {
-            menu.style.display = "none";
-        } else {
-            menu.style.display = "block";
-        }
+    // Increment slide index
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+
+    // Show current slide with fade-in effect
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(() => {
+        slides[slideIndex - 1].style.opacity = 1;
+    }, 10);  // Delay for transition effect
+
+    // Set timer for next slide
+    timer = setTimeout(showSlides, 4000);  // Change image every 4 seconds
+}
+
+// Next/previous controls
+function plusSlides(n) {
+    clearTimeout(timer);  // Stop current timer
+    slideIndex += n - 1;  // Adjust slide index
+    showSlides();  // Show next/previous slide
+}
+
+// Modal script
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
+
+// Toggle menu script
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
     }
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     // Navbar functionality
@@ -125,9 +148,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     dropdown.addEventListener('mouseleave', function() {
         dropdownMenu.style.display = 'none';
-    });       
+    });
 
-    
     var profileDropdown = document.getElementById("profileDropdown");
     var profileMenu = document.getElementById("profileMenu");
 
@@ -161,7 +183,17 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!profileDropdown.contains(event.target) && !profileMenu.contains(event.target)) {
             profileMenu.style.display = "none";
         }
-    });   
-    
-    
+    });
+
+    // Start the slideshow
+    showSlides();
+
+    // Trigger trip filtering on page load
+    filterTrips();
+
+    // Fade-in effect for trip form and container on page load
+    setTimeout(() => {
+        tripForm.classList.add('fade-in');
+        tripContainer.classList.add('fade-in');
+    }, 100);  // Small delay to trigger transition
 });

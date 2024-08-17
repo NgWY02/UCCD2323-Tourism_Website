@@ -1,4 +1,4 @@
-    /* Navbar styles */
+/* Navbar styles */
 .navbar.custom-navbar {
     background-color: rgba(0, 0, 0, 0.1) !important;
     padding: 0.5rem 1rem;
@@ -6,7 +6,7 @@
 }
 
 .navbar.custom-navbar:hover {
-    background-color: rgb(235, 230, 230)!important;
+    background-color: rgb(235, 230, 230) !important;
 }
 
 .navbar-brand img {
@@ -32,8 +32,8 @@
     padding: 0.5rem 0.25rem;
     font-size: 20px;
     font-family: "metropolis", sans-serif;
-    font-weight:bold;
-    color: white!important;
+    font-weight: bold;
+    color: white !important;
     transition: color 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     white-space: nowrap; /* Prevent text from wrapping */
@@ -85,7 +85,7 @@
     }
 
     .navbar.custom-navbar.menu-open {
-        background-color: rgb(235, 230, 230)!important;
+        background-color: rgb(235, 230, 230) !important;
     }
 
     .navbar.custom-navbar.menu-open .nav-link {
@@ -163,45 +163,53 @@
     transition: background-color 0.3s ease;
 }
 
-    .container {
+.container {
     width: 80%;
     margin: auto;
-    }
+}
 
-    table {
+table {
     border-collapse: collapse;
     width: 100%;
-    }
+}
 
-    th, td {
+th, td {
     text-align: left;
     padding: 8px;
-    }
-    
-    tr:nth-child(even) {
-    background-color: #f2f2f2;
-    }
+}
 
-    .slideshow-container {
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Slideshow styles */
+.slideshow-container {
     position: relative;
     max-width: 100%;
     margin: auto;
     height: 450px; /* Adjusted height for smaller scale */
-    shape-image-threshold: inherit;
-    }
+}
 
-    .mySlides {
+.mySlides {
     display: none;
     height: 100%;
-    }
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth fade-in and slide-up */
+}
 
-    .mySlides img {
+.mySlides.active {
+    opacity: 1;
+    transform: translateY(0); /* Move into position */
+}
+
+.mySlides img {
     width: 100%;
     height: 100%; /* Make image fill the container */
     object-fit: cover; /* Ensure image covers the container without distortion */
-    }
+}
 
-    .prev, .next {
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -214,19 +222,19 @@
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    }
+}
 
-    .next {
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
-    }
+}
 
-    .prev {
+.prev {
     left: 0;
     border-radius: 3px 0 0 3px;
-    }
+}
 
-    .text {
+.text {
     color: #2bfc5c77;
     font-size: 24px;
     font-weight: bold;
@@ -239,60 +247,71 @@
     background: rgba(0, 0, 0, 0.5);
     padding: 5px 10px;
     border-radius: 5px;
-    }
+}
 
-    /* Container */
-    .trip-container {
+/* Trip container styles */
+.trip-container {
     display: flex;
     justify-content: space-between;
     margin: 20px;
-    }
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
 
-    /* Form Section */
-    .trip-form {
+/* Form Section */
+.trip-form {
     width: 20%;
     padding-right: 20px;
-    }
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
 
-    .trip-form h2 {
+.trip-form.fade-in, .trip-container.fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Move into position */
+}
+
+.trip-form h2 {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
-    }
+}
 
-    .trip-form select,
-    .trip-form label {
+.trip-form select,
+.trip-form label {
     display: block;
     margin-bottom: 15px;
     font-size: 16px;
-    }
+}
 
-    .trip-form select {
+.trip-form select {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    }
+}
 
-    .duration-options label {
+.duration-options label {
     display: flex;
     align-items: center;
     cursor: pointer;
-    }
+}
 
-    .duration-options input[type="radio"] {
+.duration-options input[type="radio"] {
     margin-right: 8px;
-    }
+}
 
-    /* Card Section */
-    .trip-cards {
+/* Trip card styles */
+.trip-cards {
     width: 75%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    }
+}
 
-    .trip-card {
+.trip-card {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -301,45 +320,54 @@
     flex: 1;
     flex-basis: calc(33.33% - 20px); /* Adjust for gap */
     box-sizing: border-box;
-    }
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
 
-    .trip-card:nth-child(5n + 1) { /* Target every 5th card starting from the 1st */
+.trip-card.fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Move into position */
+}
+
+.trip-card:nth-child(5n + 1) { /* Target every 5th card starting from the 1st */
     order: 5; /* Place it after the first 4 cards */
-    }
+}
 
-    .trip-card img {
+.trip-card img {
     width: 100%;
     height: 60%;
-    }
+}
 
-    .trip-info {
-    padding: 15px;          }
+.trip-info {
+    padding: 15px;
+}
 
-    .trip-info h3 {
+.trip-info h3 {
     font-size: 16px;
     font-weight: bold;
     background-color: black;
     color: white;
     padding: 5px;
     margin: 0;
-    }
+}
 
-    .trip-info p {
+.trip-info p {
     font-size: 14px;
     color: #555;
     margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .trip-cards {
+        flex-wrap: wrap;
     }
 
-    @media (max-width: 768px) {
-        .trip-cards {
-        flex-wrap: wrap; 
-        }
-
-        .trip-card {
+    .trip-card {
         flex-basis: calc(50% - 20px); /* Adjust for two columns on smaller screens */
-        }
-
-        .trip-card:nth-child(5n + 1) {
-        order: 3; /* Adjust order for smaller screens if needed */
-        }
     }
+
+    .trip-card:nth-child(5n + 1) {
+        order: 3; /* Adjust order for smaller screens if needed */
+    }
+}
