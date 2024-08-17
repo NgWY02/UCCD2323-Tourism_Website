@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             category: "accommodations",
             state: "Johor",
             section: "valuable",
-            image: "johorhotel2.jpeg.avif"
+            image: "johorhotel2.jpg"
         },
         {
             id: 5,
