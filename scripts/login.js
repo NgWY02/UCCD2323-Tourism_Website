@@ -29,12 +29,12 @@ function login() {
         const parsedUser = JSON.parse(user);
         if (parsedUser.password === password) {
             // Set cookies
-            document.cookie = `username=${encodeURIComponent(username)}; path=/; secure; SameSite=Strict`;
-            document.cookie = `email=${encodeURIComponent(parsedUser.email)}; path=/; secure; SameSite=Strict`;
-            document.cookie = `isLoggedIn=true; path=/; secure; SameSite=Strict`;
+            document.cookie = `username=${encodeURIComponent(username)}; path=/`;
+            document.cookie = `email=${encodeURIComponent(parsedUser.email)}; path=/`;
+            document.cookie = `isLoggedIn=true; path=/`;
 
-            // Optionally set session storage
-            sessionStorage.setItem("currentUser", JSON.stringify(parsedUser));
+            // Debugging: Check if cookies are set
+            console.log('Cookies after login:', document.cookie);
 
             // Redirect to profile page
             window.location.href = "profile.html";
@@ -45,20 +45,5 @@ function login() {
     } else {
         errorMessages.classList.remove("d-none");
         errorMessages.textContent = "Incorrect username or password.";
-    }
-}
-
-function togglePassword() {
-    const passwordField = document.getElementById("password");
-    const toggleIcon = document.getElementById("togglePassword").querySelector("i");
-
-    if (passwordField.type === "password") {
-        passwordField.type = "text";
-        toggleIcon.classList.remove("fa-eye");
-        toggleIcon.classList.add("fa-eye-slash");
-    } else {
-        passwordField.type = "password";
-        toggleIcon.classList.remove("fa-eye-slash");
-        toggleIcon.classList.add("fa-eye");
     }
 }
