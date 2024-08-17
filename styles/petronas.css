@@ -164,10 +164,11 @@
 }
 
 .header-section {
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -274,3 +275,48 @@
     align-items: center;
     margin-bottom: 15px;
 }
+/* Slide-in and Fade-in effects for various sections */
+.content-section,
+.video-section,
+.twin-building-section,
+.construction-section,
+.tour-section
+.step {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.content-section.fade-in,
+.video-section.fade-in,
+.twin-building-section.fade-in,
+.construction-section.fade-in,
+.tour-section.fade-in,
+.step.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.img-section img {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.img-section img.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+.construction-image,.step {
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.5s ease-in-out;
+}
+
+.construction-image:hover,
+.step:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    
+}
+
+
