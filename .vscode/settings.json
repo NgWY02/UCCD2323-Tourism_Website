@@ -1,5 +1,8 @@
 {
     "liveServer.settings.port": 5501,
     "appService.defaultWebAppToDeploy": "/subscriptions/ce721843-d96b-4d1d-9380-dc8e6b24d147/resourceGroups/UCCD2323-Tourism/providers/Microsoft.Web/sites/3and1",
-    "appService.deploySubpath": "."
+    "appService.deploySubpath": ".",
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "main"
+    ]
 }
